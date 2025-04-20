@@ -14,6 +14,9 @@ import {
   UserPlus,
   Users,
   BarChartBig,
+  Book,
+  Bot,
+  Snowflake,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -46,9 +49,22 @@ export function NavMenu() {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
+          <Link href="/EngiHub" className="flex flex-row">
+            <Book className="mr-2 h-4 w-4" />
+            <span>EngiHub</span>
+          </Link>
+        </DropdownMenuItem>
+        <DropdownMenuItem>
           <User className="mr-2 h-4 w-4" />
           <span>Profile</span>
         </DropdownMenuItem>
+
+        <DropdownMenuItem>
+          <Link href="/raviai" className="flex flexr-row">
+            <Bot className="mr-2 h-4 w-4" />
+            <span>Ai Helper</span>
+          </Link>
+        </DropdownMenuItem>        
         <DropdownMenuItem>
           <Link href="/quizz/new" className="flex flexr-row">
             <Plus className="mr-2 h-4 w-4" />
@@ -56,50 +72,47 @@ export function NavMenu() {
           </Link>
         </DropdownMenuItem>
         <DropdownMenuItem>
-          <Link href="/billing" className="flex flexr-row">
-            <CreditCard className="mr-2 h-4 w-4" />
-            <span>Billing</span>
+          <Link href="/compiler" className="flex flexr-row">
+            <Snowflake className="mr-2 h-4 w-4" />
+            <span>Code Compiler</span>
           </Link>
         </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Settings className="mr-2 h-4 w-4" />
-          <span>Settings</span>
+        
+
+        <DropdownMenuItem disabled>
+  <div className="flex flex-row items-center text-muted-foreground cursor-not-allowed">
+    <CreditCard className="mr-2 h-4 w-4" />
+    <span>Billing (Disabled)</span>
+  </div>
+</DropdownMenuItem>
+<DropdownMenuItem>
+          <Link href="/settings" className="flex flexr-row">
+            <Settings className="mr-2 h-4 w-4" />
+            <span>Settings</span>
+          </Link>
         </DropdownMenuItem>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
       <DropdownMenuGroup>
         <DropdownMenuSub>
-          <DropdownMenuSubTrigger>
-            <UserPlus className="mr-2 h-4 w-4" />
-            <span>Invite users</span>
-          </DropdownMenuSubTrigger>
           <DropdownMenuPortal>
-            <DropdownMenuSubContent>
-              <DropdownMenuItem>
-                <Mail className="mr-2 h-4 w-4" />
-                <span>Email</span>
-              </DropdownMenuItem>
-              <DropdownMenuItem>
-                <MessageSquare className="mr-2 h-4 w-4" />
-                <span>Message</span>
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem>
-                <PlusCircle className="mr-2 h-4 w-4" />
-                <span>More...</span>
-              </DropdownMenuItem>
-            </DropdownMenuSubContent>
           </DropdownMenuPortal>
         </DropdownMenuSub>
       </DropdownMenuGroup>
       <DropdownMenuSeparator />
-      <DropdownMenuItem>
-        <Github className="mr-2 h-4 w-4" />
-        <span>GitHub</span>
-      </DropdownMenuItem>
-      <DropdownMenuItem>
-        <LifeBuoy className="mr-2 h-4 w-4" />
-        <span>Support</span>
+      <DropdownMenuItem asChild>
+  <a
+    href="https://github.com/Aditya948351"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex flex-row items-center"
+  >
+    <Github className="mr-2 h-4 w-4" />
+    <span>GitHub</span>
+  </a>
+</DropdownMenuItem>
+      <DropdownMenuItem disabled>
+        <span className="h-5 font-bold text-foreground">Made by PBL Group No 8</span>
       </DropdownMenuItem>
     </DropdownMenuContent>
   )

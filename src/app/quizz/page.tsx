@@ -8,33 +8,97 @@ import QuizzSubmission from "./QuizzSubmission";
 
 const questions = [
   {
-    questionText: "What is React?",
+    questionText: "What is the primary objective of Software Engineering?",
     answers: [
-      { answerText: "A library for building user interfaces", isCorrect: true, id: 1 },
-      { answerText: "A front-end framework", isCorrect: false, id: 2 },
-      { answerText: "A back-end framework", isCorrect: false, id: 3 },
-      { answerText: "A database", isCorrect: false, id: 4 }
+      { answerText: "To produce reliable and efficient software", isCorrect: true, id: 1 },
+      { answerText: "To write as much code as possible", isCorrect: false, id: 2 },
+      { answerText: "To reduce project cost only", isCorrect: false, id: 3 },
+      { answerText: "To increase system complexity", isCorrect: false, id: 4 }
     ]
   },
   {
-    questionText: "What is JSX?",
+    questionText: "Which of the following is NOT a phase in SDLC?",
     answers: [
-      { answerText: "JavaScript XML", isCorrect: true, id: 1 },
-      { answerText: "JavaScript", isCorrect: false, id: 2 },
-      { answerText: "JavaScript and XML", isCorrect: false, id: 3 },
-      { answerText: "JavaScript and HTML", isCorrect: false, id: 4 }
+      { answerText: "Software Testing", isCorrect: false, id: 1 },
+      { answerText: "Requirement Gathering", isCorrect: false, id: 2 },
+      { answerText: "Coding", isCorrect: false, id: 3 },
+      { answerText: "Hardware Design", isCorrect: true, id: 4 }
     ]
   },
   {
-    questionText: "What is the virtual DOM?",
+    questionText: "Which SDLC model is also known as the classic life cycle model?",
     answers: [
-      { answerText: "A virtual representation of the DOM", isCorrect: true, id: 1 },
-      { answerText: "A real DOM", isCorrect: false, id: 2 },
-      { answerText: "A virtual representation of the browser", isCorrect: false, id: 3 },
-      { answerText: "A virtual representation of the server", isCorrect: false, id: 4 }
+      { answerText: "Waterfall Model", isCorrect: true, id: 1 },
+      { answerText: "Agile Model", isCorrect: false, id: 2 },
+      { answerText: "Spiral Model", isCorrect: false, id: 3 },
+      { answerText: "RAD Model", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "In Agile development, what is a 'sprint'?",
+    answers: [
+      { answerText: "A short, time-boxed period to complete tasks", isCorrect: true, id: 1 },
+      { answerText: "A design pattern", isCorrect: false, id: 2 },
+      { answerText: "A testing strategy", isCorrect: false, id: 3 },
+      { answerText: "A deployment phase", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "Which diagram is used to model the system architecture?",
+    answers: [
+      { answerText: "Component Diagram", isCorrect: true, id: 1 },
+      { answerText: "Use Case Diagram", isCorrect: false, id: 2 },
+      { answerText: "Sequence Diagram", isCorrect: false, id: 3 },
+      { answerText: "Activity Diagram", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "Which testing is performed without executing the code?",
+    answers: [
+      { answerText: "Static Testing", isCorrect: true, id: 1 },
+      { answerText: "Dynamic Testing", isCorrect: false, id: 2 },
+      { answerText: "Unit Testing", isCorrect: false, id: 3 },
+      { answerText: "Integration Testing", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "Which one is a black-box testing technique?",
+    answers: [
+      { answerText: "Equivalence Partitioning", isCorrect: true, id: 1 },
+      { answerText: "Code Review", isCorrect: false, id: 2 },
+      { answerText: "Path Testing", isCorrect: false, id: 3 },
+      { answerText: "Statement Coverage", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "Who is responsible for managing the product backlog in Scrum?",
+    answers: [
+      { answerText: "Product Owner", isCorrect: true, id: 1 },
+      { answerText: "Scrum Master", isCorrect: false, id: 2 },
+      { answerText: "Development Team", isCorrect: false, id: 3 },
+      { answerText: "Client", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "Which software metric measures the complexity of a program?",
+    answers: [
+      { answerText: "Cyclomatic Complexity", isCorrect: true, id: 1 },
+      { answerText: "Lines of Code (LOC)", isCorrect: false, id: 2 },
+      { answerText: "Number of Bugs", isCorrect: false, id: 3 },
+      { answerText: "Defect Density", isCorrect: false, id: 4 }
+    ]
+  },
+  {
+    questionText: "Which of the following is a non-functional requirement?",
+    answers: [
+      { answerText: "System shall respond within 2 seconds", isCorrect: true, id: 1 },
+      { answerText: "System shall allow login", isCorrect: false, id: 2 },
+      { answerText: "System shall record transactions", isCorrect: false, id: 3 },
+      { answerText: "System shall generate reports", isCorrect: false, id: 4 }
     ]
   }
 ];
+
 
 export default function Home() {
   const [started, setStarted] = useState<boolean>(false);
