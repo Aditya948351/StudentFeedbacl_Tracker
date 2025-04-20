@@ -37,11 +37,20 @@ const UploadDoc = () => {
   }
 
   const handleDocumentUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setDocument(e?.target?.files?.[0]);
-    if (error) {
-      setError("")
+    const file = e?.target?.files?.[0];
+  
+    if (file && file.type !== "application/pdf") {
+      setError("Only PDF files are allowed.");
+      setDocument(null);
+      return;
     }
-  }
+  
+    setDocument(file);
+    if (error) {
+      setError("");
+    }
+  };
+  
 
   return (
     <div className="w-full">
@@ -49,7 +58,14 @@ const UploadDoc = () => {
         <label htmlFor="document" className="bg-secondary w-full flex h-20 rounded-md border-4 border-dashed border-blue-900 relative">
           <div className="absolute inset-0 m-auto flex justify-center items-center">
             {document && document?.name ? document.name : "Drag a file"}</div>
-          <input type="file" id="document" className="relative block w-full h-full z-50 opacity-0" onChange={handleDocumentUpload} />
+            <input
+  type="file"
+  id="document"
+  accept="application/pdf"
+  className="relative block w-full h-full z-50 opacity-0"
+  onChange={handleDocumentUpload}
+/>
+
         </label>
         <p className="text-secondary-foreground my-2">Supported file types: pdf</p>
         {error ? <p className="text-red-600">{error}</p> : null}
