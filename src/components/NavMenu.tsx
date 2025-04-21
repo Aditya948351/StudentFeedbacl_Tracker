@@ -82,7 +82,7 @@ export function NavMenu() {
         <DropdownMenuItem disabled>
   <div className="flex flex-row items-center text-muted-foreground cursor-not-allowed">
     <CreditCard className="mr-2 h-4 w-4" />
-    <span>Billing (Enjoy free)</span>
+    <span>Billing (Enjoy free🥳)</span>
   </div>
 </DropdownMenuItem>
 <DropdownMenuItem>
@@ -112,7 +112,7 @@ export function NavMenu() {
   </a>
 </DropdownMenuItem>
       <DropdownMenuItem disabled>
-        <span className="h-5 font-bold text-foreground">Made with 💗 by PBL Group No 8</span>
+        <span className="h-5 font-bold text-foreground">🌟Made by PBL Group No 8</span>
       </DropdownMenuItem>
     </DropdownMenuContent>
   )

@@ -7,7 +7,7 @@ import Header from "@/components/ui/header";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Quizz Ai',
+  title: 'SwayamShiksha',
   description: 'Generate Quizzes And Study Faster Using AI',
 }
 
